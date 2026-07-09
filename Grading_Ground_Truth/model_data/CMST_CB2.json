@@ -1,0 +1,319 @@
+{
+  "root": "150",
+  "node_count": 21,
+  "edge_count": 20,
+  "nodes": [
+    {
+      "name": "150",
+      "kind": "source",
+      "level": 2.0,
+      "children": [
+        "J4"
+      ]
+    },
+    {
+      "name": "J4",
+      "kind": "junction",
+      "level": 2.0,
+      "children": [
+        "L4",
+        "L6",
+        "J3"
+      ]
+    },
+    {
+      "name": "C2",
+      "kind": "cluster",
+      "level": 2.0,
+      "children": [
+        "L75",
+        "L85",
+        "L100",
+        "L103"
+      ]
+    },
+    {
+      "name": "L66",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L50",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L41",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "C1",
+      "kind": "cluster",
+      "level": 2.0,
+      "children": [
+        "L24",
+        "L30",
+        "L32",
+        "J2"
+      ]
+    },
+    {
+      "name": "L16",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L4",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L6",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L24",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L30",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L32",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L75",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L85",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L100",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L103",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "J0",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "C2",
+        "L66"
+      ]
+    },
+    {
+      "name": "J1",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "J0",
+        "L50"
+      ]
+    },
+    {
+      "name": "J2",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "J1",
+        "L41"
+      ]
+    },
+    {
+      "name": "J3",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "C1",
+        "L16"
+      ]
+    }
+  ],
+  "metadata": {
+    "source": "L103_bode_samples.csv",
+    "data_dir": "c:\\Users\\huynh35\\smokescreen\\clustering_method\\data\\CB2",
+    "phase": "C",
+    "mag_col": "Y1_Mag_dB",
+    "selected_f_Hz": null,
+    "tree_build_method": "cluster_mst",
+    "distance_threshold_setting": 2,
+    "resolved_distance_threshold": null,
+    "mst_root": "C2",
+    "mst_edges": [
+      {
+        "parent_cluster": "L66",
+        "child_cluster": "L50",
+        "combined_distance": 3.0251034019335314,
+        "parent_cluster_voltage_score": 28.77314388171738,
+        "child_cluster_voltage_score": 26.51689256798416,
+        "parent_members": "L66",
+        "child_members": "L50"
+      },
+      {
+        "parent_cluster": "C2",
+        "child_cluster": "L66",
+        "combined_distance": 3.3985115225794438,
+        "parent_cluster_voltage_score": 30.53322071463166,
+        "child_cluster_voltage_score": 28.77314388171738,
+        "parent_members": "L75, L85, L100, L103",
+        "child_members": "L66"
+      },
+      {
+        "parent_cluster": "L41",
+        "child_cluster": "C1",
+        "combined_distance": 3.8184580736845515,
+        "parent_cluster_voltage_score": 23.09744431464124,
+        "child_cluster_voltage_score": 20.82060103946024,
+        "parent_members": "L41",
+        "child_members": "L24, L30, L32"
+      },
+      {
+        "parent_cluster": "L50",
+        "child_cluster": "L41",
+        "combined_distance": 4.188300341543232,
+        "parent_cluster_voltage_score": 26.51689256798416,
+        "child_cluster_voltage_score": 23.09744431464124,
+        "parent_members": "L50",
+        "child_members": "L41"
+      },
+      {
+        "parent_cluster": "C1",
+        "child_cluster": "L16",
+        "combined_distance": 5.953269522735816,
+        "parent_cluster_voltage_score": 20.82060103946024,
+        "child_cluster_voltage_score": 16.40112507102212,
+        "parent_members": "L24, L30, L32",
+        "child_members": "L16"
+      },
+      {
+        "parent_cluster": "L16",
+        "child_cluster": "C0",
+        "combined_distance": 10.515087082132684,
+        "parent_cluster_voltage_score": 16.40112507102212,
+        "child_cluster_voltage_score": 7.041511456570045,
+        "parent_members": "L16",
+        "child_members": "L4, L6"
+      }
+    ],
+    "voltage_regularization": {
+      "enabled": true,
+      "weight": 1.0,
+      "response_scale": 9.226225058403742,
+      "descending": true,
+      "voltage_order": [
+        "L103",
+        "L85",
+        "L75",
+        "L100",
+        "L66",
+        "L50",
+        "L41",
+        "L24",
+        "L32",
+        "L30",
+        "L16",
+        "L4",
+        "L6"
+      ],
+      "voltage_rank": {
+        "L103": 0,
+        "L85": 1,
+        "L75": 2,
+        "L100": 3,
+        "L66": 4,
+        "L50": 5,
+        "L41": 6,
+        "L24": 7,
+        "L32": 8,
+        "L30": 9,
+        "L16": 10,
+        "L4": 11,
+        "L6": 12
+      }
+    },
+    "voltage_constraint_mode": "soft",
+    "clusters": {
+      "C0": [
+        "L4",
+        "L6"
+      ],
+      "L16": [
+        "L16"
+      ],
+      "C1": [
+        "L24",
+        "L30",
+        "L32"
+      ],
+      "L41": [
+        "L41"
+      ],
+      "L50": [
+        "L50"
+      ],
+      "L66": [
+        "L66"
+      ],
+      "C2": [
+        "L75",
+        "L85",
+        "L100",
+        "L103"
+      ]
+    },
+    "source_junction": "J4",
+    "merged_source_attachment": "C0",
+    "inserted_listener_junctions": {
+      "L66": "J0",
+      "L50": "J1",
+      "L41": "J2",
+      "L16": "J3"
+    },
+    "probe": "L103",
+    "probe_included": true,
+    "selected_labels": [
+      "L4",
+      "L6",
+      "L16",
+      "L24",
+      "L30",
+      "L32",
+      "L41",
+      "L50",
+      "L66",
+      "L75",
+      "L85",
+      "L100",
+      "L103"
+    ]
+  }
+}

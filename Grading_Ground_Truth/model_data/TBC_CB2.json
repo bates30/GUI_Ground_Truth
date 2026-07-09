@@ -1,0 +1,159 @@
+{
+  "root": "J6",
+  "node_count": 20,
+  "edge_count": 19,
+  "nodes": [
+    {
+      "name": "L16",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L4",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L6",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L24",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L32",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L41",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L50",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L30",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L66",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L103",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L100",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L75",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "L85",
+      "kind": "leaf",
+      "level": 0.0,
+      "children": []
+    },
+    {
+      "name": "J0",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "L24",
+        "L41",
+        "L103"
+      ]
+    },
+    {
+      "name": "J1",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "L6",
+        "L85",
+        "J0"
+      ]
+    },
+    {
+      "name": "J2",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "L32",
+        "L66",
+        "J1"
+      ]
+    },
+    {
+      "name": "J3",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "L16",
+        "L50",
+        "L100",
+        "L75",
+        "J2"
+      ]
+    },
+    {
+      "name": "J4",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "L30",
+        "J3"
+      ]
+    },
+    {
+      "name": "J5",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "L4",
+        "J4"
+      ]
+    },
+    {
+      "name": "J6",
+      "kind": "junction",
+      "level": 0.0,
+      "children": [
+        "J5"
+      ]
+    }
+  ],
+  "metadata": {
+    "source": "comparative.py",
+    "source_node": 103,
+    "split_nodes": [],
+    "depth_config": "CB5"
+  }
+}

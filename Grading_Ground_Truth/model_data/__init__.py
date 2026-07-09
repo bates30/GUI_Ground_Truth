@@ -1,0 +1,3 @@
+"""
+Model data module.
+"""
