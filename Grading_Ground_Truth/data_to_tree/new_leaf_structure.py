@@ -289,16 +289,26 @@ def main(red_node, yellow_nodes, source, G):
     # Previous yellow nodes: exclude current list AND red_node (needed for later logic)
     previous_yellow_nodes = all_yellow_nodes_history - set(yellow_nodes) - {red_node}
 
-    # Split nodes that are both pink (intersection) and yellow/orange (listening sensors)
+    # Split nodes that are both pink (intersection) and yellow/orange/red (sensor nodes)
     # into two separate nodes for the JSON output structure
     nodes_to_split = []
 
-    # Identify nodes that need to be split (pink nodes that are also current or previous yellow)
+    # Get all sensor nodes for this iteration (including red_node)
+    all_current_sensors = set(yellow_nodes) | {red_node}
+
+    # Identify nodes that need to be split (pink nodes that are also sensors)
     for n in B.nodes():
         if n in new_intersection_nodes:
-            # Check if this pink node is also a current yellow node
-            if n in yellow_nodes and n != red_node:
-                nodes_to_split.append((n, 'yellow'))
+            # Check if this pink node is also a current sensor (yellow or red)
+            if n in all_current_sensors:
+                # Determine color type for visualization
+                if n == red_node:
+                    color_type = 'red'
+                elif n in yellow_nodes:
+                    color_type = 'yellow'
+                else:
+                    color_type = 'red'  # Fallback
+                nodes_to_split.append((n, color_type))
             # Check if this pink node is also a previous yellow node
             elif n in previous_yellow_nodes:
                 nodes_to_split.append((n, 'orange'))
@@ -521,6 +531,9 @@ def run_tree_generation(CB_state=None, bus123_only_switch=None, input_data_path=
         }
         nodes_list.append(node_entry)
 
+    # Add all sensor leaf nodes
+    # Split nodes are handled via children relationships - they should appear as children
+    # of their corresponding junction nodes
     for sensor_node in sorted(all_sensor_nodes):
         sensor_label = node_to_l_label[sensor_node]
 
