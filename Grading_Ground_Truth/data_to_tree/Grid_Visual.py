@@ -1,6 +1,8 @@
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+from matplotlib.lines import Line2D
 from pathlib import Path
 import sys
 
@@ -343,7 +345,17 @@ def visualize_grid(red_node, yellow_nodes, source, G, pos, group_idx=0, output_p
     )
 
     ax.invert_yaxis()
-    ax.set_title(f"Probe location: {red_node} | Group: {group_idx}")
+    legend_items = [
+        Patch(facecolor="green", label="Source"),
+        Patch(facecolor="yellow", label="Listening Sensor (Current)"),
+        #Patch(facecolor="orange", label="Listening Sensor (Previous)"),
+        Patch(facecolor="red", label="Probing Sensor Location"),
+        Patch(facecolor="pink", label="First Shared Node"),
+        Line2D([0], [0], color='red', linewidth=2, linestyle='-', label='Connections (Solid)'),
+    ]
+    ax.legend(handles=legend_items, loc="upper left", bbox_to_anchor=(-0.1, 1.1))
+
+    ax.set_title(f"Probe location: {red_node}")
 
     if output_path:
         fig.savefig(output_path, dpi=300, bbox_inches="tight")
