@@ -1,13 +1,3 @@
-"""
-Orchestrator script that coordinates tree generation and comparison metrics.
-
-This script:
-1. Takes sensor locations and CB state as input
-2. Calls new_leaf_structure_tree_v2.py to generate ground truth tree
-3. Calls GUI_ready_RF.py, GUI_ready_SLD.py, GUI_ready_TED.py with generated and test trees
-4. Outputs all metrics to Metrics.json
-"""
-
 import sys
 from pathlib import Path
 
@@ -62,6 +52,12 @@ def main(source_node, sensor_locations, CB_state, test_tree_path,
     # Step 4: Set output directory for metrics
     if output_dir is None:
         output_dir = Path(__file__).resolve().parent / "output"
+
+    # Delete output directory if it exists to ensure clean results
+    import shutil
+    if output_dir.exists():
+        shutil.rmtree(output_dir)
+
     output_dir.mkdir(exist_ok=True)
 
    
@@ -129,7 +125,7 @@ def main(source_node, sensor_locations, CB_state, test_tree_path,
 if __name__ == "__main__":
     # Example usage
     example_source_node = 150
-    example_sensors = [103, 41,75,  6, 16, 4,  24, 32,  50, 30, 66,  100,  85]
+    example_sensors = [1, 103, 41,75,  6, 16, 4,  24, 32,  50, 30, 66,  100,  85]
     example_cb_state = "CB3.xls"
     example_test_tree = grading_dir / "model_data" / "MTGP_CB3.json"
     example_probe_depth = 1
