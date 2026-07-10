@@ -461,12 +461,12 @@ def visualize_tree(red_node, yellow_nodes, source, G, group_idx=0, count=0, outp
     legend_items = [
         Patch(facecolor="green", label="Source"),
         Patch(facecolor="yellow", label="Listening Sensor (Current)"),
-        Patch(facecolor="orange", label="Listening Sensor (Previous)"),
+        #Patch(facecolor="orange", label="Listening Sensor (Previous)"),
         Patch(facecolor="red", label="Probing Sensor Location"),
         Patch(facecolor="pink", label="First Shared Node"),
         Line2D([0], [0], color='red', linewidth=2, linestyle='-', label='Connections (Solid)'),
     ]
-    ax.legend(handles=legend_items, loc="upper left", bbox_to_anchor=(-0.15, 1.15))
+    ax.legend(handles=legend_items, loc="upper left", bbox_to_anchor=(-0.1, 1.1))
 
     ax.set_title(f"Probe location: {red_node}")
     ax.axis('off')
